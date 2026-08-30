@@ -31,6 +31,14 @@ pipeline {
                 sh 'ls -lah build'
             }
         }
+        
+stage('Git Information') {
+    steps {
+        sh 'git branch'
+        sh 'git log --oneline -5'
+        sh 'git status'
+    }
+}
 
     }
 
